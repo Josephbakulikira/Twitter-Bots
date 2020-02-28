@@ -8,8 +8,8 @@ import login
 import interaction
 
 driver = 0
-username = ''
-password = ''
+username = '' #put your username here
+password = ''#put your password here
 
 def main():
 	global driver
@@ -18,6 +18,7 @@ def main():
 	driver = webdriver.Chrome("D:/chromedriver.exe")
 	log = login.Login(driver, username, password)
 	log.signin()
+	#link for the channel to get data of followers from
 	driver.get('https://mobile.twitter.com/unity3d')
 	time.sleep(3)
 	interact = interaction.Interaction(driver)
